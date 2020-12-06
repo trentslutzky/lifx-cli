@@ -3,9 +3,9 @@ from lifxlan import *
 lifx = LifxLAN()
 
 desk_light_mac = "d0:73:d5:3c:c7:96"
-desk_light_ip = "192.168.1.11"
-bed_light_mac = "d0:73:d5:2b:45:89"
-bed_light_ip = "192.168.1.2"
+desk_light_ip = "192.168.1.32"
+bed_light_mac = "d0:73:d5:36:92:ac"
+bed_light_ip = "192.168.1.30"
 
 def main():
     desk_light = Light(desk_light_mac, desk_light_ip)

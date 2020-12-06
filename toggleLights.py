@@ -1,13 +1,13 @@
-#!usr/bin/python3.8
+#!/usr/bin/python3.8
 
 from lifxlan import *
 
 lifx = LifxLAN()
 
 desk_light_mac = "d0:73:d5:3c:c7:96"
-desk_light_ip = "192.168.1.32"
+desk_light_ip = "192.168.1.29"
 main_light_mac = "d0:73:d5:36:92:ac"
-main_light_ip = "192.168.1.30"
+main_light_ip = "192.168.1.28"
 
 def main():
     desk_light = Light(desk_light_mac, desk_light_ip)
