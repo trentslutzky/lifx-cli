@@ -1,2 +1,2 @@
 # lifx-cli
-Using Python and Fish shell to control my LIFX lights
+Using Python to control my LIFX lights
