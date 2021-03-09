@@ -46,8 +46,29 @@ def main():
     console.print(table)
 
     for light in lights:
-        console.print('Control',lights[light]['label'],'[Y/n]? :',end='',style='#ffe06d')
-        to_control = input()
+        ready = False
+        while(not ready):
+            console.print('Control',lights[light]['label'],'[Y/n]? :',end='',style='#ffe06d')
+            to_control = input()
+            if to_control == 'y':
+                light_string = lights[light]['mac']+' '+lights[light]['ip']
+                lights_to_control.append(light_string)
+                ready = True
+            elif to_control == 'n':
+                ready = True
+            else:
+                ready = False
+
+    mac_file = open('.mac_addresses','w')
+    for mac in lights_to_control:
+        mac_file.write(mac)
+        mac_file.write('\n')
+    mac_file.close()
+
+    new_lights = []
+    with open('.mac_addresses') as f:
+        new_lights = f.read().splitlines()
+
 
 if __name__ == "__main__":
     main()
